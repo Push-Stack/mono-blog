@@ -23,7 +23,7 @@ export default async function BlogsList({ blogs }: IBlogsListProps) {
   ));
 
   return (
-    <div className="gap-2 md:gap-4 grid grid-cols-12 ">
+    <div className="gap-2 sm:gap-4 grid grid-cols-12 ">
       {renderBlogsContent}
     </div>
   );

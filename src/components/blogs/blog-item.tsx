@@ -1,38 +1,50 @@
 import { getRandomDate } from "@/lib/utils";
-import { Card, CardFooter, CardHeader, Image } from "@nextui-org/react";
+import {
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  Image,
+} from "@nextui-org/react";
 import NextImage from "next/image";
 interface IBlogItemProps {
   blog: Blog;
 }
 
 export default function BlogsItem({ blog }: IBlogItemProps) {
-  const { id, title, url } = blog;
+  const { title, content_text, photo_url } = blog;
   const date = getRandomDate().toDateString();
   return (
     <Card
-      isBlurred
-      className="border-none bg-background/60 dark:bg-default-100/50 "
-      shadow="sm"
+      radius="none"
+      fullWidth={false}
+      shadow="none"
+      className="border-none  "
     >
-      <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-        <p className="text-tiny light:font-bold light:text-black uppercase font-bold">
-          Blog #{id}
-        </p>
-        <h4 className="text-black dark:text-white font-medium text-large">
-          {title}
-        </h4>
+      <CardHeader className=" flex flex-col items-start gap-4 ">
+        <Image
+          as={NextImage}
+          height={600}
+          width={800}
+          alt={title}
+          className="z-0  rounded-none w-full h-full object-cover overflow-clip"
+          src={photo_url}
+        />
+        <h3 className="font-bold text-lg ">{title}</h3>
+        <p className="text-sm text-gray-500 dark:text-gray-200 ">{date}</p>
       </CardHeader>
-      <Image
-        as={NextImage}
-        height={600}
-        width={600}
-        removeWrapper
-        alt={title}
-        className="z-0 w-full h-full object-cover"
-        src={url}
-      />
-      <CardFooter className="absolute bg-black/40 bottom-0 z-10 ">
-        <p className="text-tiny text-white">{date}</p>
+      <CardBody>
+        <p className="text-sm text-gray-700 dark:text-white break-words leading-loose">
+          {content_text.length > 180
+            ? content_text.slice(0, 180) + "..."
+            : content_text}
+        </p>
+      </CardBody>
+      <CardFooter>
+        <Button className="bg-transparent underline p-0 uppercase tracking-widest  text-gray-500 dark:text-gray-200">
+          Read more
+        </Button>
       </CardFooter>
     </Card>
   );

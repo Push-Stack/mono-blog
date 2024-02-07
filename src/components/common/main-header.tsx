@@ -7,7 +7,7 @@ export default function MainHeader() {
   return (
     <Container>
       <header className="flex justify-content-center items-center flex-col gap-10  my-8 ">
-        <h2 className="text-xl sm:text-2xl font-bold font-brand">
+        <h2 className="text-xl hidden sm:block sm:text-2xl font-bold font-brand">
           {siteInfo.brand}
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-4 ">

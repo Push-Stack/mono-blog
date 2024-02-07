@@ -30,11 +30,10 @@ export default function Header() {
 
       <NavbarContent className="sm:hidden " justify="center">
         <NavbarBrand>
-          <Link href="/" className="font-brand font-bold text-inherit">
+          <Link href="/" className="text-xl sm:text-2xl font-bold font-brand">
             {siteInfo.brand}
           </Link>
         </NavbarBrand>
-        <NavbarItem></NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden " justify="end">
@@ -42,12 +41,6 @@ export default function Header() {
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarBrand>
-          <Link href="/" className="font-bold text-inherit font-brand">
-            {siteInfo.brand}
-          </Link>
-        </NavbarBrand>
-
         {navbarLinks.map(({ name, href }, index) => (
           <NavbarItem key={`${name}-${index}`}>
             <NextUILink color="foreground" href={href}>

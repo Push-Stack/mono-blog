@@ -5,7 +5,7 @@ import Header from "@/components/common/header";
 import MainHeader from "@/components/common/main-header";
 import { siteInfo } from "@/constants";
 import Footer from "@/components/common/footer";
-import { inter, rubik } from "@/lib/fonts";
+import { roboto, rubik } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: siteInfo.title,
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${rubik.variable}`}>
+      <body className={`${roboto.className} ${rubik.variable}`}>
         <Providers>
           <Header />
           <MainHeader />
