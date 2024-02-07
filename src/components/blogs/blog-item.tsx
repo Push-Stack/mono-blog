@@ -1,4 +1,4 @@
-import { getRandomDate } from "@/lib/utils";
+import { formatDate, getRandomDate } from "@/lib/utils";
 import {
   Button,
   Card,
@@ -13,8 +13,8 @@ interface IBlogItemProps {
 }
 
 export default function BlogsItem({ blog }: IBlogItemProps) {
-  const { title, content_text, photo_url } = blog;
-  const date = getRandomDate().toDateString();
+  const { title, content_text, photo_url, created_at } = blog;
+  const date = new Date();
   return (
     <Card
       radius="none"
@@ -32,7 +32,9 @@ export default function BlogsItem({ blog }: IBlogItemProps) {
           src={photo_url}
         />
         <h3 className="font-bold text-lg ">{title}</h3>
-        <p className="text-sm text-gray-500 dark:text-gray-200 ">{date}</p>
+        <p className="text-sm text-gray-500 dark:text-gray-200 ">
+          {formatDate(date)}
+        </p>
       </CardHeader>
       <CardBody>
         <p className="text-sm text-gray-700 dark:text-white break-words leading-loose">
