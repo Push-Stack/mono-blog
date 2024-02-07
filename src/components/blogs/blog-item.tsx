@@ -21,7 +21,7 @@ export default function BlogsItem({ blog }: IBlogItemProps) {
       radius="none"
       fullWidth={true}
       shadow="sm"
-      className="border-none h-full !bg-foreground-100  "
+      className="border-none h-full !bg-foreground-100 dark:bg-content1 "
     >
       <CardHeader className=" flex flex-col items-start gap-4 !relative">
         <Image
@@ -38,18 +38,16 @@ export default function BlogsItem({ blog }: IBlogItemProps) {
           {formatDate(date)}
         </p>
       </CardHeader>
-      <CardBody>
+      <CardBody className="flex flex-col gap-2 items-start  ">
         <p className="text-sm text-gray-700 dark:text-white break-words leading-loose h-min">
           {content_text.length > 280
             ? content_text.slice(0, 280) + "..."
             : content_text}
         </p>
-      </CardBody>
-      <CardFooter>
         <Button className="bg-transparent underline p-0 uppercase tracking-widest  text-gray-500 dark:text-gray-200">
           Read more
         </Button>
-      </CardFooter>
+      </CardBody>
     </Card>
   );
 }

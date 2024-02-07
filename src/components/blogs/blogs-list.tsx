@@ -34,7 +34,7 @@ export default async function BlogsList({ blogs }: IBlogsListProps) {
   });
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-2 sm:gap-4 grid-flow-row-dense">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-2 sm:gap-4 grid-flow-row-dense">
       {renderBlogsContent}
     </div>
   );
