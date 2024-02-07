@@ -37,7 +37,7 @@ export const socialLinks = [
 
 export const navbarLinks = [
   {
-    name: "Faq",
+    name: "FAQ",
     href: "#",
   },
   {

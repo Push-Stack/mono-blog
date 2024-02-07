@@ -30,7 +30,7 @@ export default function Header() {
 
       <NavbarContent className="sm:hidden " justify="center">
         <NavbarBrand>
-          <Link href="/" className="font-bold text-inherit">
+          <Link href="/" className="font-brand font-bold text-inherit">
             {siteInfo.brand}
           </Link>
         </NavbarBrand>
@@ -43,7 +43,7 @@ export default function Header() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
-          <Link href="/" className="font-bold text-inherit">
+          <Link href="/" className="font-bold text-inherit font-brand">
             {siteInfo.brand}
           </Link>
         </NavbarBrand>

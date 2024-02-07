@@ -9,7 +9,9 @@ export default async function HomePage() {
   return (
     <main>
       <Container>
-        <BlogsList blogs={blogs} />
+        <div className="mt-6">
+          <BlogsList blogs={blogs} />
+        </div>
       </Container>
     </main>
   );

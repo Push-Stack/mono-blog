@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/providers";
 import Header from "@/components/common/header";
 import MainHeader from "@/components/common/main-header";
 import { siteInfo } from "@/constants";
 import Footer from "@/components/common/footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter, rubik } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: siteInfo.title,
@@ -21,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${rubik.variable}`}>
         <Providers>
           <Header />
           <MainHeader />
