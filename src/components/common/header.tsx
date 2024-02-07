@@ -1,4 +1,4 @@
-import { brandName, navbarLinks, socialLinks } from "@/constants";
+import { siteInfo, navbarLinks, socialLinks } from "@/constants";
 import {
   Button,
   Link,
@@ -28,13 +28,13 @@ export default function Header() {
 
       <NavbarContent className="sm:hidden pr-3" justify="start">
         <NavbarBrand>
-          <p className="font-bold text-inherit">{brandName}</p>
+          <p className="font-bold text-inherit">{siteInfo.brand}</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
-          <p className="font-bold text-inherit">{brandName}</p>
+          <p className="font-bold text-inherit">{siteInfo.brand}</p>
         </NavbarBrand>
 
         {navbarLinks.map(({ name, href }, index) => (

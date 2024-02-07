@@ -4,13 +4,13 @@ import "./globals.css";
 import { Providers } from "@/providers";
 import Header from "@/components/common/header";
 import MainHeader from "@/components/common/main-header";
+import { siteInfo } from "@/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mono Blog.",
-  description:
-    "Welcome to our vibrant blog hub, where inspiration meets insight! Discover a diverse array of articles covering topics from technology to travel, fashion to food, and everything in between",
+  title: siteInfo.title,
+  description: siteInfo.description,
 };
 
 export default function RootLayout({

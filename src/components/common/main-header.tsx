@@ -1,13 +1,13 @@
 import { Link } from "@nextui-org/react";
 import { AiOutlinePlus } from "react-icons/ai";
-import { brandName, mainHeaderLinks } from "@/constants";
+import { siteInfo, mainHeaderLinks } from "@/constants";
 import Container from "./container";
 
 export default function MainHeader() {
   return (
     <Container>
       <header className="flex justify-content-center items-center flex-col gap-10  my-8 ">
-        <h2 className="text-xl sm:text-2xl font-bold">{brandName}</h2>
+        <h2 className="text-xl sm:text-2xl font-bold">{siteInfo.brand}</h2>
         <div className="flex flex-wrap items-center justify-center gap-4 ">
           {mainHeaderLinks.map(({ href, name }, index) => (
             <Link
