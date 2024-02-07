@@ -21,7 +21,7 @@ export default function BlogsItem({ blog }: IBlogItemProps) {
       radius="none"
       fullWidth={true}
       shadow="sm"
-      className="border-none h-full min-h-[370px] !bg-foreground-100 dark:bg-content1 "
+      className="border-none h-full min-h-[400px] !bg-foreground-100 dark:bg-content1 "
     >
       <CardHeader className=" flex flex-col items-start gap-4 !relative">
         <Image
