@@ -27,3 +27,46 @@ export const socialLinks = [
     href: "#",
   },
 ];
+
+export const navbarLinks = [
+  {
+    name: "faq",
+    href: "#",
+  },
+  {
+    name: "contact",
+    href: "#",
+  },
+];
+
+export const mainHeaderLinks = [
+  {
+    name: "Home",
+    href: "#",
+  },
+  {
+    name: "Pages",
+    href: "#",
+  },
+  {
+    name: "Portfolio",
+    href: "#",
+  },
+  {
+    name: "Blog",
+    href: "#",
+  },
+  {
+    name: "Shop",
+    href: "#",
+  },
+  {
+    name: "Features",
+    href: "#",
+  },
+  {
+    name: "Elements",
+    href: "#",
+  },
+];
+export const brandName = "mono blog.";

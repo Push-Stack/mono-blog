@@ -1,4 +1,4 @@
-import { socialLinks } from "@/constants";
+import { brandName, navbarLinks, socialLinks } from "@/constants";
 import {
   Button,
   Link,
@@ -10,9 +10,6 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
-import { FaFacebookF } from "react-icons/fa";
-
-const menuItems = ["Faq", "Contact"];
 
 export default function Header() {
   const socialLinksContent = socialLinks.map(({ Icon, title, href }, index) => (
@@ -31,19 +28,19 @@ export default function Header() {
 
       <NavbarContent className="sm:hidden pr-3" justify="start">
         <NavbarBrand>
-          <p className="font-bold text-inherit">Mono Blog.</p>
+          <p className="font-bold text-inherit">{brandName}</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
-          <p className="font-bold text-inherit">Mono Blog.</p>
+          <p className="font-bold text-inherit">{brandName}</p>
         </NavbarBrand>
 
-        {menuItems.map((item, index) => (
-          <NavbarItem key={`${item}-${index}`}>
-            <Link color="foreground" href="#">
-              {item}
+        {navbarLinks.map(({ name, href }, index) => (
+          <NavbarItem key={`${name}-${index}`}>
+            <Link color="foreground" href={href}>
+              {name}
             </Link>
           </NavbarItem>
         ))}
@@ -54,10 +51,10 @@ export default function Header() {
       </NavbarContent>
 
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link color="foreground" className="w-full" href="#" size="lg">
-              {item}
+        {navbarLinks.map(({ name, href }, index) => (
+          <NavbarMenuItem key={`${name}-${index}`}>
+            <Link color="foreground" className="w-full" href={href} size="lg">
+              {name}
             </Link>
           </NavbarMenuItem>
         ))}
