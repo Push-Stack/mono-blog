@@ -37,11 +37,11 @@ export const socialLinks = [
 
 export const navbarLinks = [
   {
-    name: "faq",
+    name: "Faq",
     href: "#",
   },
   {
-    name: "contact",
+    name: "Contact",
     href: "#",
   },
 ];
