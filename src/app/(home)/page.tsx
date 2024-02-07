@@ -1,7 +1,9 @@
+import Container from "@/components/common/container";
+
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Home Page
+    <main>
+      <Container>content</Container>
     </main>
   );
 }

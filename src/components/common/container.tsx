@@ -7,6 +7,8 @@ interface IContainerProps {
 
 export default function Container({ children, className }: IContainerProps) {
   return (
-    <div className={cn("max-w-7xl mx-auto p-4 ", className)}>{children}</div>
+    <div className={cn("max-w-6xl mx-auto p-4 sm:px-8 ", className)}>
+      {children}
+    </div>
   );
 }
