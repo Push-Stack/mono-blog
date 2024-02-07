@@ -1,9 +1,10 @@
-import { getBlogs } from "@/lib/api";
 import BlogsItem from "./blog-item";
 
-export default async function BlogsList() {
-  const blogs = await getBlogs();
+interface IBlogsListProps {
+  blogs: Blog[];
+}
 
+export default async function BlogsList({ blogs }: IBlogsListProps) {
   if (!Boolean(blogs.length)) {
     return (
       <div className="text-center text-danger-500 p-4 border rounded">
