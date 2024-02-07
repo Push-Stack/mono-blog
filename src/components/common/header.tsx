@@ -10,6 +10,7 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
+import { ThemeSwitcher } from "../theme/theme-switcher";
 
 export default function Header() {
   const socialLinksContent = socialLinks.map(({ Icon, title, href }, index) => (
@@ -26,10 +27,15 @@ export default function Header() {
         <NavbarMenuToggle />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden pr-3" justify="center">
+      <NavbarContent className="sm:hidden " justify="center">
         <NavbarBrand>
           <p className="font-bold text-inherit">{siteInfo.brand}</p>
         </NavbarBrand>
+        <NavbarItem></NavbarItem>
+      </NavbarContent>
+
+      <NavbarContent className="sm:hidden " justify="end">
+        <ThemeSwitcher />
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
@@ -48,6 +54,7 @@ export default function Header() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         {socialLinksContent}
+        <ThemeSwitcher />
       </NavbarContent>
 
       <NavbarMenu className="flex justify-content-center items-center gap-6">
