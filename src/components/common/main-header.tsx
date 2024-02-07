@@ -14,7 +14,7 @@ export default function MainHeader() {
               key={name}
               color="foreground"
               href={href}
-              className="tracking-widest text-sm sm:text-md"
+              className="tracking-widest text-sm sm:text-md uppercase"
             >
               {name}
               <span>
