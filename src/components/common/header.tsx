@@ -26,7 +26,7 @@ export default function Header() {
         <NavbarMenuToggle />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden pr-3" justify="start">
+      <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
           <p className="font-bold text-inherit">{siteInfo.brand}</p>
         </NavbarBrand>
@@ -50,7 +50,7 @@ export default function Header() {
         {socialLinksContent}
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="flex justify-content-center items-center gap-6">
         {navbarLinks.map(({ name, href }, index) => (
           <NavbarMenuItem key={`${name}-${index}`}>
             <Link color="foreground" className="w-full" href={href} size="lg">
