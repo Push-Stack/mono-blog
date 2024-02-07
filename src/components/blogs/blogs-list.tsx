@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import BlogsItem from "./blog-item";
 
 interface IBlogsListProps {
@@ -12,18 +13,28 @@ export default async function BlogsList({ blogs }: IBlogsListProps) {
       </div>
     );
   }
+  const renderBlogsContent = blogs.map((blog, index) => {
+    const randomSpan = [
+      "lg:row-span-1",
+      "lg:col-span-1",
+      "lg:row-span-2",
+      "lg:col-span-2",
+    ];
 
-  const renderBlogsContent = blogs.map((blog) => (
-    <div
-      className="p-4 col-span-12 sm:p-0 sm:col-span-6 md:col-span-4"
-      key={blog.id}
-    >
-      <BlogsItem blog={blog} />
-    </div>
-  ));
+    const indexN = Math.floor(Math.random() * 4);
+
+    return (
+      <div
+        className={cn("p-4 h-full w-full", `${randomSpan[indexN]}`)}
+        key={blog.id}
+      >
+        <BlogsItem blog={blog} />
+      </div>
+    );
+  });
 
   return (
-    <div className="gap-2 sm:gap-4 grid grid-cols-12 ">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-2 sm:gap-4 grid-flow-row-dense">
       {renderBlogsContent}
     </div>
   );

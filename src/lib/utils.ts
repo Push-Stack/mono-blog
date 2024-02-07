@@ -21,9 +21,7 @@ export function formatDate(date: Date) {
     "December",
   ];
 
-  return `${
-    months[date.getMonth() + 1]
-  } ${date.getDate()}, ${date.getFullYear()}`;
+  return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 }
 
 export function getRandomDate() {
