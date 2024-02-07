@@ -1,6 +1,6 @@
 import { getRandomDate } from "@/lib/utils";
-import { Button, Card, CardFooter, CardHeader, Image } from "@nextui-org/react";
-
+import { Card, CardFooter, CardHeader, Image } from "@nextui-org/react";
+import NextImage from "next/image";
 interface IBlogItemProps {
   blog: Blog;
 }
@@ -23,6 +23,9 @@ export default function BlogsItem({ blog }: IBlogItemProps) {
         </h4>
       </CardHeader>
       <Image
+        as={NextImage}
+        height={600}
+        width={600}
         removeWrapper
         alt={title}
         className="z-0 w-full h-full object-cover"

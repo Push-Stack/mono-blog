@@ -5,6 +5,7 @@ import { Providers } from "@/providers";
 import Header from "@/components/common/header";
 import MainHeader from "@/components/common/main-header";
 import { siteInfo } from "@/constants";
+import Footer from "@/components/common/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,9 @@ export default function RootLayout({
           <Header />
           <MainHeader />
           {children}
+          <div className="mt-4">
+            <Footer />
+          </div>
         </Providers>
       </body>
     </html>
